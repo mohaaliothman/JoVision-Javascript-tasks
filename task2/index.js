@@ -132,5 +132,14 @@ function updateClock() {
 
     document.getElementById("clock").textContent = time;
 }
+//setInterval(updateClock, 1000);
 
-setInterval(updateClock, 1000);
+
+//task 9 
+
+function getIP(){
+    fetch("https://api.ipify.org/")
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
