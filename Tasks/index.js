@@ -159,3 +159,24 @@ function showIP(){
     });
 
 }
+
+//task 11 
+function showIP11(){
+
+    fetch("https://api.ipify.org/")
+    .then(function(response){
+
+        if(!response.ok){
+            throw new Error("Request failed");
+        }
+
+        return response.text();
+    })
+    .then(function(data){
+        document.getElementById("ipButton").textContent = data;
+    })
+    .catch(function(error){
+        window.alert("Error: " + error.message);
+    });
+
+}
