@@ -143,3 +143,19 @@ function getIP(){
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 }
+
+//task 10
+function showIP(){
+
+    fetch("https://api.ipify.org/")
+    .then(function(response){
+        return response.text();
+    })
+    .then(function(data){
+        document.getElementById("ipButton").textContent = data;
+    })
+    .catch(function(error){
+        console.error("Error:", error);
+    });
+
+}
