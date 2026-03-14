@@ -180,3 +180,26 @@ function showIP11(){
     });
 
 }
+
+//task 12
+function submitData(){
+
+    let name = document.getElementById("nameInput").value;
+    let age = document.getElementById("ageInput").value;
+
+    let timestamp = new Date().toLocaleString();
+
+    let user = {
+        name: name,
+        age: age,
+        timestamp: timestamp
+    };
+
+    let {name: userName, age: userAge, timestamp: time} = user;
+
+    alert(
+        "Your name is: " + userName +
+        "\nYour age is: " + userAge +
+        "\nTimestamp: " + time
+    );
+}
