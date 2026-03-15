@@ -203,3 +203,17 @@ function submitData(){
         "\nTimestamp: " + time
     );
 }
+
+//task 13
+function getAge(){
+    let name = document.getElementById("name").value;
+    let url = "https://api.agify.io/?name="+name;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data =>{
+        const {name , age}= data;
+        alert("your name is : " +  name + " and your age is : "+ age);
+    });
+
+}
